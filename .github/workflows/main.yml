@@ -30,6 +30,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+          projectPath: ./MyProject
 
   build:
     name: Build my project ✨
@@ -59,6 +60,7 @@ jobs:
         with:
           targetPlatform: StandaloneWindows64
           allowDirtyBuild: true
+          projectPath: ./MyProject
 
       # Output
       - uses: actions/upload-artifact@v3
