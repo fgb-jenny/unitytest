@@ -53,7 +53,6 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
-          path: Myproject
 
       # Cache
       - uses: actions/cache@v3
@@ -73,8 +72,8 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          projectPath: Myproject
           targetPlatform: ${{ matrix.targetPlatform }}
+          projectPath: Myproject
 
       # Output
       - uses: actions/upload-artifact@v3
